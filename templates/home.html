@@ -18,6 +18,7 @@
             background-attachment: local; /* Keep background image fixed while scrolling */
             height: 100vh; /* Set body height to viewport height */
             overflow-y: scroll; /* Allow vertical scrolling */
+            
         }
         #logo {
             position: absolute;
@@ -32,8 +33,8 @@
             display: inline-block;
             vertical-align: middle;
             margin-left: 150px;
+            cursor: pointer;
         }
-        
         
         nav button {
             margin: 5px;
@@ -43,16 +44,48 @@
             border: none; /* Remove any border */
             cursor: pointer; /*changes arrow to finger*/
         }
+
+        .slogan {
+            font-family: Copperplate, Papyrus, fantasy;
+            font-size: 30px; /* Adjust the font size as needed */
+            font-weight: bold; /* Make the font bold */
+            text-align: left; /* Align text to the left */
+            line-height: 1.5; /* Set line height for readability */
+            width: fit-content; /* Make the container width fit its contents */
+            margin-top: -750px;
+            margin-left: 150px;
+        }
+
+        .footer {
+            background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        
     </style>
 </head>
 <body>
     <header>
         <img id="logo" src="/static/scp.png" alt="Logo">
-        <h1>Stone Choice  Properties</h1>
+        <h1 onclick="window.location.reload()">Stone Choice Properties</h1>
         <nav>
             <button onclick="window.location.href='/about'">About Us</button>
             <button onclick="window.location.href='/contact'">Contact Us</button>
         </nav>
     </header>
+    <div class="slogan">
+        <p>Transform Your</p>
+        <p>Rental Experience</p>
+        <p>With Our Unique Perspective</p>
+    </div>
+    
+    <footer class="footer">
+        © 2024 Stone Choice Properties Limited. All rights reserved.
+    </footer>
 </body>
 </html>

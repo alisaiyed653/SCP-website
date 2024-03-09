@@ -15,7 +15,7 @@
             background-size: cover; /* Cover the entire container without stretching */
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: local; /* Keep background image fixed while scrolling */
+            background-attachment: scroll; /* Keep background image fixed while scrolling */
             height: 100vh; /* Set body height to viewport height */
             overflow-y: scroll; /* Allow vertical scrolling */
         }
@@ -33,6 +33,7 @@
             display: inline-block;
             vertical-align: middle;
             margin-left: 150px;
+            cursor: pointer;
         }
         
         nav button {
@@ -44,25 +45,103 @@
             cursor: pointer; /*changes arrow to finger*/
         }
 
-        p {
-            position: absolute;
-            top: 50%;
-            left: 50px; /* Adjust the left position as needed */
-            transform: translateY(-50%);
-            font-family: "Brush Script MT", cursive;
-            font-size: 24px; /* Adjust the font size as needed */
+
+        .footer {
+            background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
         }
+
+        .approach-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .headline {
+            font-size: 34px;
+            font-family: Copperplate, Papyrus, fantasy;
+            font-weight: bold;
+            margin-bottom: 20px;
+            left: 0px;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            width: 800px;
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 400px;
+        }
+
+        .image {
+            width: 200px; /* Adjust the width of the image */
+            height: 200px; /* Adjust the height of the image */
+            background-color: #ccc; /* Placeholder background color */
+            margin-right: 20px;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        .text p {
+            margin: 0;
+        }
+
+        /* Button style */
+        .scroll-button {
+            position: fixed;
+            bottom: 40px;
+            left: 10px;
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            font-family: Copperplate, Papyrus, fantasy;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <img id="logo" src="/static/scp.png" alt="Logo">
-        <h1>Stone Choice  Properties</h1>
+        <h1 onclick="window.location.href='/home'">Stone Choice  Properties</h1>
         <nav>
             <button onclick="window.location.href='/about'">About Us</button>
             <button onclick="window.location.href='/contact'">Contact Us</button>
         </nav>
     </header>
-    <p>Hello to the about us page</p>
+    <div class="approach-container">
+        <div class="headline">Our Approach</div>
+        <div class="box">
+            <div class="image"></div>
+            <div class="text">
+                <p>Having been working and living in East London, we know the area inside out. Knowing the local infrastructure can be really beneficial for rental valuation and types of tenants that get attracted. </p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        © 2024 Stone Choice Properties Limited. All rights reserved.
+    </footer>
+
+    <!-- Scroll button -->
+    <div class="scroll-button" onclick="scrollToBottom()">Scroll Down</div>
+    
+    <!-- JavaScript to scroll down -->
+    <script>
+        function scrollToBottom() {
+            window.scrollTo(0,document.body.scrollHeight);
+        }
+    </script>
+
 </body>
 </html>

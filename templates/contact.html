@@ -1,4 +1,4 @@
-<!-- about.html -->
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +32,7 @@
             display: inline-block;
             vertical-align: middle;
             margin-left: 150px;
+            cursor: pointer;
         }
         
         
@@ -48,12 +49,15 @@
 <body>
     <header>
         <img id="logo" src="/static/scp.png" alt="Logo">
-        <h1>Stone Choice  Properties</h1>
+        <h1 onclick="window.location.href='/home'">Stone Choice  Properties</h1>
         <nav>
             <button onclick="window.location.href='/about'">About Us</button>
             <button onclick="window.location.href='/contact'">Contact Us</button>
         </nav>
     </header>
     <p>Contact page</p>
+    <footer class="footer">
+        © 2024 Stone Choice Properties Limited. All rights reserved.
+    </footer>
 </body>
 </html>
